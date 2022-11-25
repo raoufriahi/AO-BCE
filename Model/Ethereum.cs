@@ -80,7 +80,7 @@ namespace ebaproxy.Model
     {
         public int status { get; set; }
         public string message { get; set; }
-        public double Sum { get; set; }
+        public double result { get; set; }
     }
 
    

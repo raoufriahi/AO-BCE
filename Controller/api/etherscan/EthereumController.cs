@@ -18,6 +18,8 @@ namespace ebaproxy.Controller.api.etherscan
         readonly List<string> _BinCexTo;
         readonly List<string> _BinCexFrom;
         readonly List<string> _BinDex;
+        private const double Wei = 1000000000000000000;
+        private const string apikey = "TJIUMFV5ENF1IV2CXFHYVYMWX3Y2358RRY";
         public EthereumController()
         {
             _BinCexTo = new List<string>()
@@ -74,7 +76,7 @@ namespace ebaproxy.Controller.api.etherscan
         public async Task<BalanceSingleAddr> GetBalanceSingleAddr(string session, string address)
         {
             HttpContext.Response.Headers.Add("Access-Control-Allow-Origin", "*");
-            string Request = "https://api.etherscan.io/api?module=account&action=balance&address=" + address + "&tag=latest&apikey=TJIUMFV5ENF1IV2CXFHYVYMWX3Y2358RRY";
+            string Request = "https://api.etherscan.io/api?module=account&action=balance&address=" + address + "&tag=latest&apikey="+ apikey;
             using (HttpClient client = new HttpClient())
             {
                 client.DefaultRequestHeaders.Accept.Clear();
@@ -100,7 +102,7 @@ namespace ebaproxy.Controller.api.etherscan
         public async Task<BalanceMultiAddr> GetBalanceMultiAddr(string session, string address)
         {
             HttpContext.Response.Headers.Add("Access-Control-Allow-Origin", "*");
-            string Request = @"https://api.etherscan.io/api?module=account&action=balancemulti&address=" + address + "&tag=latest&apikey=TJIUMFV5ENF1IV2CXFHYVYMWX3Y2358RRY";
+            string Request = @"https://api.etherscan.io/api?module=account&action=balancemulti&address=" + address + "&tag=latest&apikey=" + apikey;
             using (HttpClient client = new HttpClient())
             {
                 client.DefaultRequestHeaders.Accept.Clear();
@@ -137,6 +139,7 @@ namespace ebaproxy.Controller.api.etherscan
                 Transactions.result = listTransactions.result.Count;
                 Console.WriteLine("number of transactions: " + Transactions.result);
             }
+
             return Transactions;
         }
 
@@ -144,15 +147,25 @@ namespace ebaproxy.Controller.api.etherscan
         public async Task<ListTransactions> GetListTransactions(string session, string address, int page, int offset)
         {
             HttpContext.Response.Headers.Add("Access-Control-Allow-Origin", "*");
-            string Request = "https://api.etherscan.io/api?module=account&action=txlist&address=" + address + "&startblock=0&endblock=99999999&page=" + page + "&offset=" + offset + "&sort=asc&apikey=TJIUMFV5ENF1IV2CXFHYVYMWX3Y2358RRY";
+            string Request = "https://api.etherscan.io/api?module=account&action=txlist&address=" + address + "&startblock=0&endblock=99999999&page=" + page + "&offset=" + offset + "&sort=asc&apikey=" + apikey;
             using (HttpClient client = new HttpClient())
             {
                 client.DefaultRequestHeaders.Accept.Clear();
                 HttpResponseMessage response = await client.GetAsync(Request);
                 if (response.IsSuccessStatusCode)
+                {
+                    Console.WriteLine("GetListTransactions:Success!");
                     return await response.Content.ReadFromJsonAsync<ListTransactions>();
+                }
             }
-            return new ListTransactions();
+
+            Console.WriteLine("GetListTransactions:failure!");
+            return new ListTransactions()
+            {
+                status = 1,
+                message = "KO",
+                result = new List<Transaction>()
+            };
         }
 
         [HttpGet("GetCexInOutflow")]
@@ -221,22 +234,6 @@ namespace ebaproxy.Controller.api.etherscan
             }
             return iDexInOutflow;
         }
-
-        private async Task<BlockReward> Getblockreward(int blockno)
-        {
-            string Request = "https://api.etherscan.io/api?module=block&action=getblockreward&blockno=" + blockno + "&apikey=TJIUMFV5ENF1IV2CXFHYVYMWX3Y2358RRY";
-            using (HttpClient client = new HttpClient())
-            {
-                client.DefaultRequestHeaders.Accept.Clear();
-                HttpResponseMessage response = await client.GetAsync(Request);
-                if (response.IsSuccessStatusCode)
-                {
-                    return await response.Content.ReadFromJsonAsync<BlockReward>();
-                }
-            }
-            return null;
-        }
-
         private async Task<MarketChart> GetMarketChart()
         {
             string Request = "https://api.coingecko.com/api/v3/coins/ethereum/market_chart?vs_currency=eur&days=366&interval=daily";
@@ -253,33 +250,22 @@ namespace ebaproxy.Controller.api.etherscan
         }
 
         /// This method finds the number closest to​​​​​​‌​​‌‌‌​‌​‌​‌‌‌‌​​‌‌‌​​‌‌​ Timestamp.
-        public double ClosestToTimestamp(double[][] Prices, double Timestamp)
+        private double ClosestToTimestamp(double[][] Prices, double Timestamp)
         {
-
-            double Closest = Timestamp;
             double Price = 0;
             for (int i = 0; i < Prices.GetLength(0); i++)
             {
-                if (Closest == Timestamp)
+                if (Prices[i][0] >= Timestamp*1000)
                 {
-                    Closest = Prices[i][0];
                     Price = Prices[i][1];
+                    break;
                 }
-                else if (Prices[i][0] <= Closest)
-                {
-                    Closest = Prices[i][0];
-                    Price = Prices[i][1];
-                }
-                else if (Prices[i][0] > Closest)
-                {
-                    Closest = Prices[i][0];
-                    Price = Prices[i][1];
-                }
+               
             }
             return Price;
         }
 
-
+        
         [HttpGet("GetProfitAndLoss")]
         public async Task<ProfitAndLoss> GetProfitAndLoss(string session, string address, int page, int offset)
         {
@@ -287,7 +273,7 @@ namespace ebaproxy.Controller.api.etherscan
             {
                 status = 1,
                 message = "OK",
-                Sum = 0
+                result = 0
             };
 
             MarketChart marketChart = await GetMarketChart();
@@ -300,9 +286,9 @@ namespace ebaproxy.Controller.api.etherscan
                 double price = ClosestToTimestamp(marketChart.prices, transaction.timeStamp);
               
                 if (address.ToUpper().CompareTo(transaction.to.ToUpper()) == 0)
-                    profitAndLoss.Sum += transaction.value * price;
+                    profitAndLoss.result += transaction.value * price / Wei;
                 else if (address.ToUpper().CompareTo(transaction.from.ToUpper()) == 0)
-                    profitAndLoss.Sum -= transaction.value * price;
+                    profitAndLoss.result -= transaction.value * price / Wei;
 
             }
             return profitAndLoss;
