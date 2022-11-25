@@ -15,12 +15,12 @@ namespace ebaproxy.Controller.api.etherscan
     [Route("api/etherscan")]
     public class EthereumController : ControllerBase
     {
-        readonly List<string> m_BinanceCexTo;
-        readonly List<string> m_BinanceCexFrom;
-        readonly List<string> m_BinanceDex;
+        readonly List<string> _BinCexTo;
+        readonly List<string> _BinCexFrom;
+        readonly List<string> _BinDex;
         public EthereumController()
         {
-            m_BinanceCexTo = new List<string>()
+            _BinCexTo = new List<string>()
             {
                 "0xbe0eb53f46cd790cd13851d5eff43d12404d33e8",
                 "0xf977814e90da44bfa03b6295a0616a897441acec",
@@ -33,7 +33,7 @@ namespace ebaproxy.Controller.api.etherscan
                 "0x4976a4a02f38326660d17bf34b431dc6e2eb2327"
             };
 
-            m_BinanceCexFrom = new List<string>()
+            _BinCexFrom = new List<string>()
             {
                 "0xbe0eb53f46cd790cd13851d5eff43d12404d33e8",
                 "0xf977814e90da44bfa03b6295a0616a897441acec",
@@ -45,7 +45,7 @@ namespace ebaproxy.Controller.api.etherscan
                 "0x56eddb7aa87536c09ccc2793473599fd21a8b17f",
                 "0x4976a4a02f38326660d17bf34b431dc6e2eb2327"
             };
-            m_BinanceDex = new List<string>()
+            _BinDex = new List<string>()
             {
                 "0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D",
                 "0x6b175474e89094c44da98b954eedeac495271d0f",
@@ -80,11 +80,16 @@ namespace ebaproxy.Controller.api.etherscan
                 client.DefaultRequestHeaders.Accept.Clear();
                 HttpResponseMessage response = await client.GetAsync(Request);
                 if (response.IsSuccessStatusCode)
-                    return await response.Content.ReadFromJsonAsync<BalanceSingleAddr>();   
+                {
+                    Console.WriteLine("GetBalanceSingleAddr:Success!");
+                    return await response.Content.ReadFromJsonAsync<BalanceSingleAddr>();
+                }
+                
             }
+            Console.WriteLine("GetBalanceSingleAddr:failure!");
             return new BalanceSingleAddr
             {
-                status = 0,
+                status = 1,
                 message = "KO",
                 result = ""
             };
@@ -101,25 +106,36 @@ namespace ebaproxy.Controller.api.etherscan
                 client.DefaultRequestHeaders.Accept.Clear();
                 HttpResponseMessage response = await client.GetAsync(Request);
                 if (response.IsSuccessStatusCode)
+                {
+                    Console.WriteLine("GetBalanceMultiAddr:Success!");
                     return await response.Content.ReadFromJsonAsync<BalanceMultiAddr>();
+                }
             }
-            return new BalanceMultiAddr();
+            Console.WriteLine("GetBalanceMultiAddr:failure!");
+            
+            return new BalanceMultiAddr()
+            {
+                status = 1,
+                message = "KO",
+                result = new List<Balance>()
+            };
         }
 
         [HttpGet("GetCountTransactions")]
-        public async Task<NumberTransactions> GetCountTransactions(string session, string address, int page, int offset)
+        public async Task<CountTransactions> GetCountTransactions(string session, string address, int page, int offset)
         {
-            NumberTransactions Transactions = new NumberTransactions()
+            CountTransactions Transactions = new CountTransactions()
             {
                 status = 1,
                 message = "OK",
-                Count = 0
+                result = 0
             };
 
             ListTransactions listTransactions = await GetListTransactions(session, address, page, offset);
             if (listTransactions != null)
             {
-                Transactions.Count = listTransactions.result.Count;
+                Transactions.result = listTransactions.result.Count;
+                Console.WriteLine("number of transactions: " + Transactions.result);
             }
             return Transactions;
         }
@@ -155,7 +171,7 @@ namespace ebaproxy.Controller.api.etherscan
             ListTransactions listTransactions = await GetListTransactions(session, address, page, offset);
             foreach (Transaction transaction in listTransactions.result)
             {
-                foreach (string Binance in m_BinanceCexFrom)
+                foreach (string Binance in _BinCexFrom)
                 {
                     if (Binance.ToUpper().CompareTo(transaction.from.ToUpper()) == 0)
                     {
@@ -163,7 +179,7 @@ namespace ebaproxy.Controller.api.etherscan
                         break;
                     }
                 }
-                foreach (string Binance in m_BinanceCexTo)
+                foreach (string Binance in _BinCexTo)
                 {
                     if (Binance.ToUpper().CompareTo(transaction.to.ToUpper()) == 0)
                     {
@@ -191,7 +207,7 @@ namespace ebaproxy.Controller.api.etherscan
             ListTransactions listTransactions = await GetListTransactions(session, address, page, offset);
             foreach (Transaction transaction in listTransactions.result)
             {
-                foreach (string Binance in m_BinanceDex)
+                foreach (string Binance in _BinDex)
                 {
                     if (Binance.ToUpper().CompareTo(transaction.from.ToUpper()) == 0)
                     {

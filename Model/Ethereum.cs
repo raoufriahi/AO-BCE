@@ -51,11 +51,11 @@ namespace ebaproxy.Model
         public string functionName { get; set; }
     }
 
-    public class NumberTransactions
+    public class CountTransactions
     {
         public int status { get; set; }
         public string message { get; set; }
-        public int Count { get; set; }
+        public int result { get; set; }
     }
     public class CexInOutflow
     {
