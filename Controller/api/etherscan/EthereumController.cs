@@ -236,7 +236,7 @@ namespace ebaproxy.Controller.api.etherscan
         }
         private async Task<MarketChart> GetMarketChart()
         {
-            string Request = "https://api.coingecko.com/api/v3/coins/ethereum/market_chart?vs_currency=eur&days=366&interval=daily";
+            string Request = "https://api.coingecko.com/api/v3/coins/ethereum/market_chart?vs_currency=eur&days=max&interval=daily";
             using (HttpClient client = new HttpClient())
             {
                 client.DefaultRequestHeaders.Accept.Clear();
@@ -260,7 +260,6 @@ namespace ebaproxy.Controller.api.etherscan
                     Price = Prices[i][1];
                     break;
                 }
-               
             }
             return Price;
         }
