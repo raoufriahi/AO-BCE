@@ -473,36 +473,28 @@ Success [ProfitAndLoss](#ProfitAndLoss)</div>
 <div class="model">
 
 ### <a name="Balance">`Balance`</a> [Up](#__Models)
-
 <div class="field-items">
-
-<div class="param">account (optional)</div>
-
-<div class="param-desc"><span class="param-type">[String](#string)</span></div>
-
-<div class="param">balance (optional)</div>
-
-<div class="param-desc"><span class="param-type">[String](#string)</span></div>
-
+<div class="param">`account`</div>
+<div class="param-desc"><span class="param-type">string</span></div>
+<div class="param">`balance`</div>
+<div class="param-desc"><span class="param-type">string</span></div>
 </div>
-
 </div>
-
 <div class="model">
 
 ### <a name="BalanceMultiAddr">`BalanceMultiAddr`</a> [Up](#__Models)
 
 <div class="field-items">
 
-<div class="param">status (optional)</div>
+<div class="param">`status`</div>
 
-<div class="param-desc"><span class="param-type">[Integer](#integer)</span> format: int32</div>
+<div class="param-desc"><span class="param-type">integer</span> format: int32</div>
 
-<div class="param">message (optional)</div>
+<div class="param">`message`</div>
 
-<div class="param-desc"><span class="param-type">[String](#string)</span></div>
+<div class="param-desc"><span class="param-type">string</span></div>
 
-<div class="param">result (optional)</div>
+<div class="param">`result`</div>
 
 <div class="param-desc"><span class="param-type">[array[Balance]](#Balance)</span></div>
 
@@ -516,17 +508,17 @@ Success [ProfitAndLoss](#ProfitAndLoss)</div>
 
 <div class="field-items">
 
-<div class="param">status (optional)</div>
+<div class="param">`status`</div>
 
-<div class="param-desc"><span class="param-type">[Integer](#integer)</span> format: int32</div>
+<div class="param-desc"><span class="param-type">integer</span> format: int32</div>
 
-<div class="param">message (optional)</div>
+<div class="param">`message`</div>
 
-<div class="param-desc"><span class="param-type">[String](#string)</span></div>
+<div class="param-desc"><span class="param-type">string</span></div>
 
-<div class="param">result (optional)</div>
+<div class="param">`result`</div>
 
-<div class="param-desc"><span class="param-type">[String](#string)</span></div>
+<div class="param-desc"><span class="param-type">string</span></div>
 
 </div>
 
@@ -538,15 +530,15 @@ Success [ProfitAndLoss](#ProfitAndLoss)</div>
 
 <div class="field-items">
 
-<div class="param">status (optional)</div>
+<div class="param">`status`</div>
 
-<div class="param-desc"><span class="param-type">[Integer](#integer)</span> format: int32</div>
+<div class="param-desc"><span class="param-type">integer</span> format: int32</div>
 
-<div class="param">message (optional)</div>
+<div class="param">`message`</div>
 
-<div class="param-desc"><span class="param-type">[String](#string)</span></div>
+<div class="param-desc"><span class="param-type">string</span></div>
 
-<div class="param">result (optional)</div>
+<div class="param">`result`</div>
 
 <div class="param-desc"><span class="param-type">[InOutflow](#InOutflow)</span></div>
 
@@ -560,17 +552,17 @@ Success [ProfitAndLoss](#ProfitAndLoss)</div>
 
 <div class="field-items">
 
-<div class="param">status (optional)</div>
+<div class="param">`status`</div>
 
-<div class="param-desc"><span class="param-type">[Integer](#integer)</span> format: int32</div>
+<div class="param-desc"><span class="param-type">integer</span> format: int32</div>
 
-<div class="param">message (optional)</div>
+<div class="param">`message`</div>
 
-<div class="param-desc"><span class="param-type">[String](#string)</span></div>
+<div class="param-desc"><span class="param-type">string</span></div>
 
-<div class="param">result (optional)</div>
+<div class="param">`result`</div>
 
-<div class="param-desc"><span class="param-type">[Integer](#integer)</span> format: int32</div>
+<div class="param-desc"><span class="param-type">integer</span> format: int32</div>
 
 </div>
 
@@ -582,15 +574,15 @@ Success [ProfitAndLoss](#ProfitAndLoss)</div>
 
 <div class="field-items">
 
-<div class="param">status (optional)</div>
+<div class="param">`status`</div>
 
-<div class="param-desc"><span class="param-type">[Integer](#integer)</span> format: int32</div>
+<div class="param-desc"><span class="param-type">intege</span> format: int32</div>
 
-<div class="param">message (optional)</div>
+<div class="param">`message`</div>
 
-<div class="param-desc"><span class="param-type">[String](#string)</span></div>
+<div class="param-desc"><span class="param-type">string</span></div>
 
-<div class="param">result (optional)</div>
+<div class="param">`result`</div>
 
 <div class="param-desc"><span class="param-type">[InOutflow](#InOutflow)</span></div>
 
@@ -604,13 +596,13 @@ Success [ProfitAndLoss](#ProfitAndLoss)</div>
 
 <div class="field-items">
 
-<div class="param">inflow (optional)</div>
+<div class="param">`inflow`</div>
 
-<div class="param-desc"><span class="param-type">[Double](#double)</span> format: double</div>
+<div class="param-desc"><span class="param-type">double</span> format: double</div>
 
-<div class="param">outflow (optional)</div>
+<div class="param">`outflow`</div>
 
-<div class="param-desc"><span class="param-type">[Double](#double)</span> format: double</div>
+<div class="param-desc"><span class="param-type">double</span> format: double</div>
 
 </div>
 
@@ -622,15 +614,15 @@ Success [ProfitAndLoss](#ProfitAndLoss)</div>
 
 <div class="field-items">
 
-<div class="param">status (optional)</div>
+<div class="param">`status`</div>
 
-<div class="param-desc"><span class="param-type">[Integer](#integer)</span> format: int32</div>
+<div class="param-desc"><span class="param-type">integer</span> format: int32</div>
 
-<div class="param">message (optional)</div>
+<div class="param">`message`</div>
 
-<div class="param-desc"><span class="param-type">[String](#string)</span></div>
+<div class="param-desc"><span class="param-type">string</span></div>
 
-<div class="param">result (optional)</div>
+<div class="param">`result`</div>
 
 <div class="param-desc"><span class="param-type">[array[Transaction]](#Transaction)</span></div>
 
@@ -644,17 +636,17 @@ Success [ProfitAndLoss](#ProfitAndLoss)</div>
 
 <div class="field-items">
 
-<div class="param">status (optional)</div>
+<div class="param">`status`</div>
 
-<div class="param-desc"><span class="param-type">[Integer](#integer)</span> format: int32</div>
+<div class="param-desc"><span class="param-type">integer</span> format: int32</div>
 
-<div class="param">message (optional)</div>
+<div class="param">`message`</div>
 
-<div class="param-desc"><span class="param-type">[String](#string)</span></div>
+<div class="param-desc"><span class="param-type">string</span></div>
 
-<div class="param">result (optional)</div>
+<div class="param">`result`</div>
 
-<div class="param-desc"><span class="param-type">[Double](#double)</span> format: double</div>
+<div class="param-desc"><span class="param-type">double</span> format: double</div>
 
 </div>
 
@@ -666,85 +658,85 @@ Success [ProfitAndLoss](#ProfitAndLoss)</div>
 
 <div class="field-items">
 
-<div class="param">blockNumber (optional)</div>
+<div class="param">`blockNumber`</div>
 
-<div class="param-desc"><span class="param-type">[Integer](#integer)</span> format: int32</div>
+<div class="param-desc"><span class="param-type">integer</span> format: int32</div>
 
-<div class="param">timeStamp (optional)</div>
+<div class="param">`timeStamp`</div>
 
-<div class="param-desc"><span class="param-type">[Double](#double)</span> format: double</div>
+<div class="param-desc"><span class="param-type">double</span> format: double</div>
 
-<div class="param">hash (optional)</div>
+<div class="param">`hash`</div>
 
-<div class="param-desc"><span class="param-type">[String](#string)</span></div>
+<div class="param-desc"><span class="param-type">string</span></div>
 
-<div class="param">nonce (optional)</div>
+<div class="param">'nonce'</div>
 
-<div class="param-desc"><span class="param-type">[Integer](#integer)</span> format: int32</div>
+<div class="param-desc"><span class="param-type">integer</span> format: int32</div>
 
-<div class="param">blockHash (optional)</div>
+<div class="param">`blockHash`</div>
 
-<div class="param-desc"><span class="param-type">[String](#string)</span></div>
+<div class="param-desc"><span class="param-type">string</span></div>
 
-<div class="param">transactionIndex (optional)</div>
+<div class="param">`transactionIndex`</div>
 
-<div class="param-desc"><span class="param-type">[Integer](#integer)</span> format: int32</div>
+<div class="param-desc"><span class="param-type">integer</span> format: int32</div>
 
-<div class="param">from (optional)</div>
+<div class="param">`from`</div>
 
-<div class="param-desc"><span class="param-type">[String](#string)</span></div>
+<div class="param-desc"><span class="param-type">string</span></div>
 
-<div class="param">to (optional)</div>
+<div class="param">`to`</div>
 
-<div class="param-desc"><span class="param-type">[String](#string)</span></div>
+<div class="param-desc"><span class="param-type">string</span></div>
 
-<div class="param">value (optional)</div>
+<div class="param">`value`</div>
 
-<div class="param-desc"><span class="param-type">[Double](#double)</span> format: double</div>
+<div class="param-desc"><span class="param-type">double</span> format: double</div>
 
-<div class="param">gas (optional)</div>
+<div class="param">`gas`</div>
 
-<div class="param-desc"><span class="param-type">[Integer](#integer)</span> format: int32</div>
+<div class="param-desc"><span class="param-type">integer</span> format: int32</div>
 
-<div class="param">gasPrice (optional)</div>
+<div class="param">`gasPrice`</div>
 
-<div class="param-desc"><span class="param-type">[Long](#long)</span> format: int64</div>
+<div class="param-desc"><span class="param-type">long</span> format: int64</div>
 
-<div class="param">isError (optional)</div>
+<div class="param">`isError`</div>
 
-<div class="param-desc"><span class="param-type">[Integer](#integer)</span> format: int32</div>
+<div class="param-desc"><span class="param-type">integer</span> format: int32</div>
 
-<div class="param">txreceipt_status (optional)</div>
+<div class="param">`txreceipt_status`</div>
 
-<div class="param-desc"><span class="param-type">[Integer](#integer)</span> format: int32</div>
+<div class="param-desc"><span class="param-type">integer</span> format: int32</div>
 
-<div class="param">input (optional)</div>
+<div class="param">`input`</div>
 
-<div class="param-desc"><span class="param-type">[String](#string)</span></div>
+<div class="param-desc"><span class="param-type">string</span></div>
 
-<div class="param">contractAddress (optional)</div>
+<div class="param">`contractAddress`</div>
 
-<div class="param-desc"><span class="param-type">[String](#string)</span></div>
+<div class="param-desc"><span class="param-type">string</span></div>
 
-<div class="param">cumulativeGasUsed (optional)</div>
+<div class="param">`cumulativeGasUsed`</div>
 
-<div class="param-desc"><span class="param-type">[Integer](#integer)</span> format: int32</div>
+<div class="param-desc"><span class="param-type">integer</span> format: int32</div>
 
-<div class="param">gasUsed (optional)</div>
+<div class="param">`gasUsed`</div>
 
-<div class="param-desc"><span class="param-type">[Integer](#integer)</span> format: int32</div>
+<div class="param-desc"><span class="param-type">integer</span> format: int32</div>
 
-<div class="param">confirmations (optional)</div>
+<div class="param">`confirmations`</div>
 
-<div class="param-desc"><span class="param-type">[Integer](#integer)</span> format: int32</div>
+<div class="param-desc"><span class="param-type">integer</span> format: int32</div>
 
-<div class="param">methodId (optional)</div>
+<div class="param">`methodId`</div>
 
-<div class="param-desc"><span class="param-type">[String](#string)</span></div>
+<div class="param-desc"><span class="param-type">string</span></div>
 
-<div class="param">functionName (optional)</div>
+<div class="param">'functionName'</a></div>
 
-<div class="param-desc"><span class="param-type">[String](#string)</span></div>
+<div class="param-desc"><span class="param-type">string</span></div>
 
 </div>
 
