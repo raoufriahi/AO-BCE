@@ -75,29 +75,14 @@ This API call produces the following media types according to the <span class="h
 Success [BalanceMultiAddr](#BalanceMultiAddr)</div>
 
 * * *
-
-<div class="method"><a name="apiEtherscanGetBalanceSingleAddrGet"></a>
-
-<div class="method-path">[Up](#__Methods)
-
-    get /api/etherscan/GetBalanceSingleAddr
-
-</div>
-
-<div class="method-summary">(<span class="nickname">apiEtherscanGetBalanceSingleAddrGet</span>)</div>
-
+[ Jump to [Up](#__Models) ]
+<div class="method"><a name="apiEtherscanGetBalanceSingleAddrGet"></a>get /api/etherscan/GetBalanceSingleAddr</div>
 ### Query parameters
 
 <div class="field-items">
 
-<div class="param">session (optional)</div>
-
-<div class="param-desc"><span class="param-type">Query Parameter</span> —</div>
-
-<div class="param">address (optional)</div>
-
-<div class="param-desc"><span class="param-type">Query Parameter</span> —</div>
-
+<div class="param">session</div>
+<div class="param">address</div>
 </div>
 
 ### Return type
@@ -129,37 +114,17 @@ This API call produces the following media types according to the <span class="h
 Success [BalanceSingleAddr](#BalanceSingleAddr)</div>
 
 * * *
-
-<div class="method"><a name="apiEtherscanGetCexInOutflowGet"></a>
-
-<div class="method-path">[Up](#__Methods)
-
-    get /api/etherscan/GetCexInOutflow
-
-</div>
-
-<div class="method-summary">(<span class="nickname">apiEtherscanGetCexInOutflowGet</span>)</div>
+[ Jump to [Up](#__Models) ]
+<div class="method"><a name="apiEtherscanGetCexInOutflowGet"></a>get /api/etherscan/GetCexInOutflow</div>
 
 ### Query parameters
 
 <div class="field-items">
 
-<div class="param">session (optional)</div>
-
-<div class="param-desc"><span class="param-type">Query Parameter</span> —</div>
-
-<div class="param">address (optional)</div>
-
-<div class="param-desc"><span class="param-type">Query Parameter</span> —</div>
-
-<div class="param">page (optional)</div>
-
-<div class="param-desc"><span class="param-type">Query Parameter</span> — format: int32</div>
-
-<div class="param">offset (optional)</div>
-
-<div class="param-desc"><span class="param-type">Query Parameter</span> — format: int32</div>
-
+<div class="param">session</div>
+<div class="param">address</div>
+<div class="param">page</div>
+<div class="param">offset</div>
 </div>
 
 ### Return type
