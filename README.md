@@ -33,8 +33,8 @@
 # <a name="Ethereum">Ethereum</a>
 [ Jump to [Up](#__Models) ]
 <div class="method"><a name="apiEtherscanGetBalanceMultiAddrGet"></a> get /api/etherscan/GetBalanceMultiAddr</div>
-### Query parameters
 
+### Query parameters
 <div class="field-items">
 <div class="param">session</div>
 <div class="param">address</div>
@@ -77,6 +77,7 @@ Success [BalanceMultiAddr](#BalanceMultiAddr)</div>
 * * *
 [ Jump to [Up](#__Models) ]
 <div class="method"><a name="apiEtherscanGetBalanceSingleAddrGet"></a>get /api/etherscan/GetBalanceSingleAddr</div>
+
 ### Query parameters
 
 <div class="field-items">
@@ -167,22 +168,10 @@ Success [CexInOutflow](#CexInOutflow)</div>
 
 <div class="field-items">
 
-<div class="param">session (optional)</div>
-
-<div class="param-desc"><span class="param-type">Query Parameter</span> —</div>
-
-<div class="param">address (optional)</div>
-
-<div class="param-desc"><span class="param-type">Query Parameter</span> —</div>
-
-<div class="param">page (optional)</div>
-
-<div class="param-desc"><span class="param-type">Query Parameter</span> — format: int32</div>
-
-<div class="param">offset (optional)</div>
-
-<div class="param-desc"><span class="param-type">Query Parameter</span> — format: int32</div>
-
+<div class="param">session</div>
+<div class="param">address</div>
+<div class="param">page</div>
+<div class="param">offset</div>
 </div>
 
 ### Return type
@@ -222,23 +211,10 @@ Success [CountTransactions](#CountTransactions)</div>
 ### Query parameters
 
 <div class="field-items">
-
-<div class="param">session (optional)</div>
-
-<div class="param-desc"><span class="param-type">Query Parameter</span> —</div>
-
-<div class="param">address (optional)</div>
-
-<div class="param-desc"><span class="param-type">Query Parameter</span> —</div>
-
-<div class="param">page (optional)</div>
-
-<div class="param-desc"><span class="param-type">Query Parameter</span> — format: int32</div>
-
-<div class="param">offset (optional)</div>
-
-<div class="param-desc"><span class="param-type">Query Parameter</span> — format: int32</div>
-
+<div class="param">session</div>
+<div class="param">address</div>
+<div class="param">page</div>
+<div class="param">offset</div>
 </div>
 
 ### Return type
@@ -277,6 +253,7 @@ This API call produces the following media types according to the <span class="h
 <div class="method"><a name="apiEtherscanGetListTransactionsGet"></a>
 
 <div class="method-path">get /api/etherscan/GetListTransactions</div>
+
 ### Query parameters
 
 <div class="field-items">
@@ -361,6 +338,7 @@ Success [ListTransactions](#ListTransactions)</div>
 [ Jump to [Up](#__Models) ]
 <div class="method"><a name="apiEtherscanGetProfitAndLossGet"></a>
 <div class="method-path">get /api/etherscan/GetProfitAndLoss</div>
+
 ### Query parameters
 
 <div class="field-items">
