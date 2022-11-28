@@ -32,11 +32,7 @@
 
 # <a name="Ethereum">Ethereum</a>
 [ Jump to [Up](#__Models) ]
-<div class="method"><a name="apiEtherscanGetBalanceMultiAddrGet"></a>    
- get /api/etherscan/GetBalanceMultiAddr
-</div>
-<div class="method-summary">(<span class="nickname">apiEtherscanGetBalanceMultiAddrGet</span>)</div>
-
+<div class="method"><a name="apiEtherscanGetBalanceMultiAddrGet"></a> get /api/etherscan/GetBalanceMultiAddr</div>
 ### Query parameters
 
 <div class="field-items">
@@ -45,8 +41,8 @@
 </div>
 
 ### Return type
+[ Jump to [BalanceMultiAddr](#BalanceMultiAddr) ]
 
-<div class="return-type">[ Jump to [BalanceMultiAddr](#BalanceMultiAddr) ]</div>
 
 ### Example data
 
