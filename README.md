@@ -214,16 +214,10 @@ This API call produces the following media types according to the <span class="h
 Success [CountTransactions](#CountTransactions)</div>
 
 * * *
-
+[ Jump to [Up](#__Models) ]
 <div class="method"><a name="apiEtherscanGetDexInOutflowGet"></a>
 
-<div class="method-path">[Up](#__Methods)
-
-    get /api/etherscan/GetDexInOutflow
-
-</div>
-
-<div class="method-summary">(<span class="nickname">apiEtherscanGetDexInOutflowGet</span>)</div>
+<div class="method-path">get /api/etherscan/GetDexInOutflow</div>
 
 ### Query parameters
 
@@ -279,37 +273,18 @@ This API call produces the following media types according to the <span class="h
 
 
 * * *
-
+[ Jump to [Up](#__Models) ]
 <div class="method"><a name="apiEtherscanGetListTransactionsGet"></a>
 
-<div class="method-path">[Up](#__Methods)
-
-    get /api/etherscan/GetListTransactions
-
-</div>
-
-<div class="method-summary">(<span class="nickname">apiEtherscanGetListTransactionsGet</span>)</div>
-
+<div class="method-path">get /api/etherscan/GetListTransactions</div>
 ### Query parameters
 
 <div class="field-items">
 
-<div class="param">session (optional)</div>
-
-<div class="param-desc"><span class="param-type">Query Parameter</span> —</div>
-
-<div class="param">address (optional)</div>
-
-<div class="param-desc"><span class="param-type">Query Parameter</span> —</div>
-
-<div class="param">page (optional)</div>
-
-<div class="param-desc"><span class="param-type">Query Parameter</span> — format: int32</div>
-
-<div class="param">offset (optional)</div>
-
-<div class="param-desc"><span class="param-type">Query Parameter</span> — format: int32</div>
-
+<div class="param">session</div>
+<div class="param">address</div>
+<div class="param">page</div>
+<div class="param">offset</div>
 </div>
 
 ### Return type
@@ -383,37 +358,17 @@ This API call produces the following media types according to the <span class="h
 Success [ListTransactions](#ListTransactions)</div>
 
 * * *
-
+[ Jump to [Up](#__Models) ]
 <div class="method"><a name="apiEtherscanGetProfitAndLossGet"></a>
-
-<div class="method-path">[Up](#__Methods)
-
-    get /api/etherscan/GetProfitAndLoss
-
-</div>
-
-<div class="method-summary">(<span class="nickname">apiEtherscanGetProfitAndLossGet</span>)</div>
-
+<div class="method-path">get /api/etherscan/GetProfitAndLoss</div>
 ### Query parameters
 
 <div class="field-items">
 
-<div class="param">session (optional)</div>
-
-<div class="param-desc"><span class="param-type">Query Parameter</span> —</div>
-
-<div class="param">address (optional)</div>
-
-<div class="param-desc"><span class="param-type">Query Parameter</span> —</div>
-
-<div class="param">page (optional)</div>
-
-<div class="param-desc"><span class="param-type">Query Parameter</span> — format: int32</div>
-
-<div class="param">offset (optional)</div>
-
-<div class="param-desc"><span class="param-type">Query Parameter</span> — format: int32</div>
-
+<div class="param">session</div>
+<div class="param">address</div>
+<div class="param">page</div>
+<div class="param">offset</div>
 </div>
 
 ### Return type
