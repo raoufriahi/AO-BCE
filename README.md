@@ -582,87 +582,26 @@ Success [ProfitAndLoss](#ProfitAndLoss)</div>
 ### <a name="Transaction">`Transaction`</a> [Up](#__Models)
 
 <div class="field-items">
-
-<div class="param">`blockNumber`</div>
-
-<div class="param-desc"><span class="param-type">integer</span> format: int32</div>
-
-<div class="param">`timeStamp`</div>
-
-<div class="param-desc"><span class="param-type">double</span> format: double</div>
-
-<div class="param">`hash`</div>
-
-<div class="param-desc"><span class="param-type">string</span></div>
-
-<div class="param">'nonce'</div>
-
-<div class="param-desc"><span class="param-type">integer</span> format: int32</div>
-
-<div class="param">`blockHash`</div>
-
-<div class="param-desc"><span class="param-type">string</span></div>
-
-<div class="param">`transactionIndex`</div>
-
-<div class="param-desc"><span class="param-type">integer</span> format: int32</div>
-
-<div class="param">`from`</div>
-
-<div class="param-desc"><span class="param-type">string</span></div>
-
-<div class="param">`to`</div>
-
-<div class="param-desc"><span class="param-type">string</span></div>
-
-<div class="param">`value`</div>
-
-<div class="param-desc"><span class="param-type">double</span> format: double</div>
-
-<div class="param">`gas`</div>
-
-<div class="param-desc"><span class="param-type">integer</span> format: int32</div>
-
-<div class="param">`gasPrice`</div>
-
-<div class="param-desc"><span class="param-type">long</span> format: int64</div>
-
-<div class="param">`isError`</div>
-
-<div class="param-desc"><span class="param-type">integer</span> format: int32</div>
-
-<div class="param">`txreceipt_status`</div>
-
-<div class="param-desc"><span class="param-type">integer</span> format: int32</div>
-
-<div class="param">`input`</div>
-
-<div class="param-desc"><span class="param-type">string</span></div>
-
-<div class="param">`contractAddress`</div>
-
-<div class="param-desc"><span class="param-type">string</span></div>
-
-<div class="param">`cumulativeGasUsed`</div>
-
-<div class="param-desc"><span class="param-type">integer</span> format: int32</div>
-
-<div class="param">`gasUsed`</div>
-
-<div class="param-desc"><span class="param-type">integer</span> format: int32</div>
-
-<div class="param">`confirmations`</div>
-
-<div class="param-desc"><span class="param-type">integer</span> format: int32</div>
-
-<div class="param">`methodId`</div>
-
-<div class="param-desc"><span class="param-type">string</span></div>
-
-<div class="param">'functionName'</a></div>
-
-<div class="param-desc"><span class="param-type">string</span></div>
-
+<div class="param">blockNumber: integer</div>
+<div class="param">timeStamp: double</div>
+<div class="param">hash: string</div>
+<div class="param">nonce: integer</div>
+<div class="param">blockHash: string</div>
+<div class="param">transactionIndex: integer</div>
+<div class="param">from: string</div>
+<div class="param">to: string</div>
+<div class="param">value: double</div>
+<div class="param">gas: integer</div>
+<div class="param">gasPrice: long</div>
+<div class="param">isError: integer</div>
+<div class="param">txreceipt_status: integer</div>
+<div class="param">input: string</div>
+<div class="param">contractAddress: string</div>
+<div class="param">cumulativeGasUsed: integer</div>
+<div class="param">gasUsed: integer</div>
+<div class="param">confirmations: integer</div>
+<div class="param">methodId: string</div>
+<div class="param">functionName: string</a></div>
 </div>
 
 </div>
