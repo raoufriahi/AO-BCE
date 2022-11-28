@@ -2,9 +2,9 @@
 
 <div class="app-desc">An ASP.NET Core Web API for managing ToDo items</div>
 
-<div class="app-desc">More information: [https://quanteam.fr/contactez-nous/](https://quanteam.fr/contactez-nous/)</div>
+<div class="app-desc">More information: https://quanteam.fr/contactez-nous/</div>
 
-<div class="app-desc">Contact Info: [hello@helloreverb.com](hello@helloreverb.com)</div>
+<div class="app-desc">Contact Info: contact@quanteam.fr</div>
 
 <div class="app-desc">Version: v1</div>
 
