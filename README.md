@@ -36,8 +36,8 @@
 
 ### Query parameters
 <div class="field-items">
-<div class="param">session</div>
-<div class="param">address</div>
+<div class="param">session: [string]</div>
+<div class="param">address: [string]</div>
 </div>
 
 ### Return type
@@ -82,8 +82,8 @@ Success [BalanceMultiAddr](#BalanceMultiAddr)</div>
 
 <div class="field-items">
 
-<div class="param">session</div>
-<div class="param">address</div>
+<div class="param">session: [string]</div>
+<div class="param">address: [string]</div>
 </div>
 
 ### Return type
@@ -122,10 +122,10 @@ Success [BalanceSingleAddr](#BalanceSingleAddr)</div>
 
 <div class="field-items">
 
-<div class="param">session</div>
-<div class="param">address</div>
-<div class="param">page</div>
-<div class="param">offset</div>
+<div class="param">session: [string]</div>
+<div class="param">address: [string]</div>
+<div class="param">page: [int]</div>
+<div class="param">offset: [int]</div>
 </div>
 
 ### Return type
@@ -168,10 +168,10 @@ Success [CexInOutflow](#CexInOutflow)</div>
 
 <div class="field-items">
 
-<div class="param">session</div>
-<div class="param">address</div>
-<div class="param">page</div>
-<div class="param">offset</div>
+<div class="param">session: [string]</div>
+<div class="param">address: [string]</div>
+<div class="param">page: [int]</div>
+<div class="param">offset: [int]</div>
 </div>
 
 ### Return type
@@ -211,10 +211,10 @@ Success [CountTransactions](#CountTransactions)</div>
 ### Query parameters
 
 <div class="field-items">
-<div class="param">session</div>
-<div class="param">address</div>
-<div class="param">page</div>
-<div class="param">offset</div>
+<div class="param">session: [string]</div>
+<div class="param">address: [string]</div>
+<div class="param">page: [int]</div>
+<div class="param">offset: [int]</div>
 </div>
 
 ### Return type
@@ -258,10 +258,10 @@ This API call produces the following media types according to the <span class="h
 
 <div class="field-items">
 
-<div class="param">session</div>
-<div class="param">address</div>
-<div class="param">page</div>
-<div class="param">offset</div>
+<div class="param">session: [string]</div>
+<div class="param">address: [string]</div>
+<div class="param">page: [int]</div>
+<div class="param">offset: [int]</div>
 </div>
 
 ### Return type
@@ -343,10 +343,10 @@ Success [ListTransactions](#ListTransactions)</div>
 
 <div class="field-items">
 
-<div class="param">session</div>
-<div class="param">address</div>
-<div class="param">page</div>
-<div class="param">offset</div>
+<div class="param">session: [string]</div>
+<div class="param">address: [string]</div>
+<div class="param">page: [int]</div>
+<div class="param">offset : [int]</div>
 </div>
 
 ### Return type
@@ -399,16 +399,16 @@ Success [ProfitAndLoss](#ProfitAndLoss)</div>
 
 ### <a name="Balance">`Balance`</a> [Up](#__Models)
 <div class="field-items">
-<div class="param">account: string</div>
-<div class="param">balance: string</div>
+<div class="param">account: [string]</div>
+<div class="param">balance: [string]</div>
 </div>
 </div>
 <div class="model">
 
 ### <a name="BalanceMultiAddr">`BalanceMultiAddr`</a> [Up](#__Models)
 <div class="field-items">
-<div class="param">status: integer</div>
-<div class="param">message: string</div>
+<div class="param">status: [integer]</div>
+<div class="param">message: [string]</div>
 <div class="param">result: array[Balance]</div>
 </div>
 
@@ -419,9 +419,9 @@ Success [ProfitAndLoss](#ProfitAndLoss)</div>
 ### <a name="BalanceSingleAddr">`BalanceSingleAddr`</a> [Up](#__Models)
 
 <div class="field-items">
-<div class="param">status: integer</div>
-<div class="param">message: string</div>
-<div class="param">result: string</div>
+<div class="param">status: [integer]</div>
+<div class="param">message: [string]</div>
+<div class="param">result: [string]</div>
 </div>
 
 </div>
@@ -431,8 +431,8 @@ Success [ProfitAndLoss](#ProfitAndLoss)</div>
 ### <a name="CexInOutflow">`CexInOutflow`</a> [Up](#__Models)
 
 <div class="field-items">
-<div class="param">status: integer</div>
-<div class="param">message: string</div>
+<div class="param">status: [integer]</div>
+<div class="param">message: [string]</div>
 <div class="param">result: [InOutflow]</div>
 </div>
 
@@ -443,9 +443,9 @@ Success [ProfitAndLoss](#ProfitAndLoss)</div>
 ### <a name="CountTransactions">`CountTransactions`</a> [Up](#__Models)
 
 <div class="field-items">
-<div class="param">status: integer</div>
-<div class="param">message: string</div>
-<div class="param">result: integer</div>
+<div class="param">status: [integer]</div>
+<div class="param">message: [string]</div>
+<div class="param">result: [integer]</div>
 </div>
 
 </div>
@@ -455,8 +455,8 @@ Success [ProfitAndLoss](#ProfitAndLoss)</div>
 ### <a name="DexInOutflow">`DexInOutflow`</a> [Up](#__Models)
 
 <div class="field-items">
-<div class="param">status: integer</div>
-<div class="param">message: string</div>
+<div class="param">status: [integer]</div>
+<div class="param">message: [string]</div>
 <div class="param">result: [InOutflow]</div>
 </div>
 
@@ -467,8 +467,8 @@ Success [ProfitAndLoss](#ProfitAndLoss)</div>
 ### <a name="InOutflow">`InOutflow`</a> [Up](#__Models)
 
 <div class="field-items">
-<div class="param">inflow: double</div>
-<div class="param">outflow: double</div>
+<div class="param">inflow: [double]</div>
+<div class="param">outflow: [double]</div>
 </div>
 
 </div>
@@ -478,8 +478,8 @@ Success [ProfitAndLoss](#ProfitAndLoss)</div>
 ### <a name="ListTransactions">`ListTransactions`</a> [Up](#__Models)
 
 <div class="field-items">
-<div class="param">status: integer</div>
-<div class="param">message: string</div>
+<div class="param">status: [integer]</div>
+<div class="param">message: [string]</div>
 <div class="param">result: [array[Transaction]]</div>
 </div>
 
@@ -489,9 +489,9 @@ Success [ProfitAndLoss](#ProfitAndLoss)</div>
 
 ### <a name="ProfitAndLoss">`ProfitAndLoss`</a> [Up](#__Models)
 <div class="field-items">
-<div class="param">status: integer</div>
-<div class="param">message: string</div>
-<div class="param">result: double</div>
+<div class="param">status: [integer]</div>
+<div class="param">message: [string]</div>
+<div class="param">result: [double]</div>
 </div>
 
 </div>
@@ -501,26 +501,26 @@ Success [ProfitAndLoss](#ProfitAndLoss)</div>
 ### <a name="Transaction">`Transaction`</a> [Up](#__Models)
 
 <div class="field-items">
-<div class="param">blockNumber: integer</div>
-<div class="param">timeStamp: double</div>
-<div class="param">hash: string</div>
-<div class="param">nonce: integer</div>
-<div class="param">blockHash: string</div>
-<div class="param">transactionIndex: integer</div>
-<div class="param">from: string</div>
-<div class="param">to: string</div>
-<div class="param">value: double</div>
-<div class="param">gas: integer</div>
-<div class="param">gasPrice: long</div>
-<div class="param">isError: integer</div>
-<div class="param">txreceipt_status: integer</div>
-<div class="param">input: string</div>
-<div class="param">contractAddress: string</div>
-<div class="param">cumulativeGasUsed: integer</div>
-<div class="param">gasUsed: integer</div>
-<div class="param">confirmations: integer</div>
-<div class="param">methodId: string</div>
-<div class="param">functionName: string</a></div>
+<div class="param">blockNumber: [integer]</div>
+<div class="param">timeStamp: [double]</div>
+<div class="param">hash: [string]</div>
+<div class="param">nonce: [integer]</div>
+<div class="param">blockHash: [string]</div>
+<div class="param">transactionIndex: [integer]</div>
+<div class="param">from: [string]</div>
+<div class="param">to: [string]</div>
+<div class="param">value: [double]</div>
+<div class="param">gas: [integer]</div>
+<div class="param">gasPrice: [long]</div>
+<div class="param">isError: [integer]</div>
+<div class="param">txreceipt_status: [integer]</div>
+<div class="param">input: [string]</div>
+<div class="param">contractAddress: [string]</div>
+<div class="param">cumulativeGasUsed: [integer]</div>
+<div class="param">gasUsed: [integer]</div>
+<div class="param">confirmations: [integer]</div>
+<div class="param">methodId: [string]</div>
+<div class="param">functionName: [string]</a></div>
 </div>
 
 </div>
