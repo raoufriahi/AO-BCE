@@ -31,34 +31,22 @@
 *   [<span class="http-method"></span>`get /api/etherscan/GetProfitAndLoss`](#apiEtherscanGetProfitAndLossGet)
 
 # <a name="Ethereum">Ethereum</a>
-
-<div class="method"><a name="apiEtherscanGetBalanceMultiAddrGet"></a>
-
-<div class="method-path">[Up](#__Methods)
-
-    get /api/etherscan/GetBalanceMultiAddr
-
+[ Jump to [Up](#__Models) ]
+<div class="method"><a name="apiEtherscanGetBalanceMultiAddrGet"></a>    
+ get /api/etherscan/GetBalanceMultiAddr
 </div>
-
 <div class="method-summary">(<span class="nickname">apiEtherscanGetBalanceMultiAddrGet</span>)</div>
 
 ### Query parameters
 
 <div class="field-items">
-
-<div class="param">session (optional)</div>
-
-<div class="param-desc"><span class="param-type">Query Parameter</span> —</div>
-
-<div class="param">address (optional)</div>
-
-<div class="param-desc"><span class="param-type">Query Parameter</span> —</div>
-
+<div class="param">session</div>
+<div class="param">address</div>
 </div>
 
 ### Return type
 
-<div class="return-type">[BalanceMultiAddr](#BalanceMultiAddr)</div>
+<div class="return-type">[ Jump to [BalanceMultiAddr](#BalanceMultiAddr) ]</div>
 
 ### Example data
 
