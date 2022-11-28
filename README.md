@@ -22,13 +22,13 @@
 
 #### [Ethereum](#Ethereum)
 
-*   [`<span class="http-method">get</span> /api/etherscan/GetBalanceMultiAddr`](#apiEtherscanGetBalanceMultiAddrGet)
-*   [`<span class="http-method">get</span> /api/etherscan/GetBalanceSingleAddr`](#apiEtherscanGetBalanceSingleAddrGet)
-*   [`<span class="http-method">get</span> /api/etherscan/GetCexInOutflow`](#apiEtherscanGetCexInOutflowGet)
-*   [`<span class="http-method">get</span> /api/etherscan/GetCountTransactions`](#apiEtherscanGetCountTransactionsGet)
-*   [`<span class="http-method">get</span> /api/etherscan/GetDexInOutflow`](#apiEtherscanGetDexInOutflowGet)
-*   [`<span class="http-method">get</span> /api/etherscan/GetListTransactions`](#apiEtherscanGetListTransactionsGet)
-*   [`<span class="http-method">get</span> /api/etherscan/GetProfitAndLoss`](#apiEtherscanGetProfitAndLossGet)
+*   [<span class="http-method"></span>`get /api/etherscan/GetBalanceMultiAddr`](#apiEtherscanGetBalanceMultiAddrGet)
+*   [<span class="http-method"></span>`get /api/etherscan/GetBalanceSingleAddr`](#apiEtherscanGetBalanceSingleAddrGet)
+*   [<span class="http-method"></span>`get /api/etherscan/GetCexInOutflow`](#apiEtherscanGetCexInOutflowGet)
+*   [<span class="http-method"></span>`get /api/etherscan/GetCountTransactions`](#apiEtherscanGetCountTransactionsGet)
+*   [<span class="http-method"></span>`get /api/etherscan/GetDexInOutflow`](#apiEtherscanGetDexInOutflowGet)
+*   [<span class="http-method"></span>`get /api/etherscan/GetListTransactions`](#apiEtherscanGetListTransactionsGet)
+*   [<span class="http-method"></span>`get /api/etherscan/GetProfitAndLoss`](#apiEtherscanGetProfitAndLossGet)
 
 # <a name="Ethereum">Ethereum</a>
 
