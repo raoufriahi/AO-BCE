@@ -86,8 +86,8 @@ Success [BalanceMultiAddr](#BalanceMultiAddr)</div>
 </div>
 
 ### Return type
+[ Jump to [BalanceSingleAddr](#BalanceSingleAddr) ]
 
-<div class="return-type">[BalanceSingleAddr](#BalanceSingleAddr)</div>
 
 ### Example data
 
@@ -128,8 +128,8 @@ Success [BalanceSingleAddr](#BalanceSingleAddr)</div>
 </div>
 
 ### Return type
+[ Jump to [CexInOutflow](#CexInOutflow) ]
 
-<div class="return-type">[CexInOutflow](#CexInOutflow)</div>
 
 ### Example data
 
@@ -159,16 +159,9 @@ This API call produces the following media types according to the <span class="h
 Success [CexInOutflow](#CexInOutflow)</div>
 
 * * *
-
+[ Jump to [Up](#__Models) ]
 <div class="method"><a name="apiEtherscanGetCountTransactionsGet"></a>
-
-<div class="method-path">[Up](#__Methods)
-
-    get /api/etherscan/GetCountTransactions
-
-</div>
-
-<div class="method-summary">(<span class="nickname">apiEtherscanGetCountTransactionsGet</span>)</div>
+<div class="method-path">get /api/etherscan/GetCountTransactions</div>
 
 ### Query parameters
 
@@ -193,8 +186,8 @@ Success [CexInOutflow](#CexInOutflow)</div>
 </div>
 
 ### Return type
+[ Jump to [CountTransactions](#CountTransactions) ]
 
-<div class="return-type">[CountTransactions](#CountTransactions)</div>
 
 ### Example data
 
@@ -255,8 +248,8 @@ Success [CountTransactions](#CountTransactions)</div>
 </div>
 
 ### Return type
+[ Jump to [DexInOutflow](#DexInOutflow) ]
 
-<div class="return-type">[DexInOutflow](#DexInOutflow)</div>
 
 ### Example data
 
@@ -282,8 +275,8 @@ This API call produces the following media types according to the <span class="h
 ### Responses
 
 #### 200
+[ Jump to [DexInOutflow](#DexInOutflow) ]
 
-Success [DexInOutflow](#DexInOutflow)</div>
 
 * * *
 
@@ -424,8 +417,7 @@ Success [ListTransactions](#ListTransactions)</div>
 </div>
 
 ### Return type
-
-<div class="return-type">[ProfitAndLoss](#ProfitAndLoss)</div>
+[ Jump to [ProfitAndLoss](#ProfitAndLoss) ]
 
 ### Example data
 
