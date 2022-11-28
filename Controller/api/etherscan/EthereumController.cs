@@ -255,13 +255,19 @@ namespace ebaproxy.Controller.api.etherscan
             double Price = 0;
             for (int i = 0; i < Prices.GetLength(0); i++)
             {
-                if (Prices[i][0] >= Timestamp*1000)
+
+                if (Prices[i][0] == Timestamp * 1000)
                 {
                     Price = Prices[i][1];
                     break;
                 }
+                if (Prices[i][0] > Timestamp * 1000)
+                {
+                    Price = (i == 0) ? Prices[i][1] : Prices[i - 1][1];
+                    break;
+                }
             }
-            return Price;
+            return Price / Wei;
         }
 
         
@@ -285,9 +291,9 @@ namespace ebaproxy.Controller.api.etherscan
                 double price = ClosestToTimestamp(marketChart.prices, transaction.timeStamp);
               
                 if (address.ToUpper().CompareTo(transaction.to.ToUpper()) == 0)
-                    profitAndLoss.result += transaction.value * price / Wei;
+                    profitAndLoss.result += transaction.value * price ;
                 else if (address.ToUpper().CompareTo(transaction.from.ToUpper()) == 0)
-                    profitAndLoss.result -= transaction.value * price / Wei;
+                    profitAndLoss.result -= transaction.value * price;
 
             }
             return profitAndLoss;
