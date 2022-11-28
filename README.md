@@ -399,30 +399,17 @@ Success [ProfitAndLoss](#ProfitAndLoss)</div>
 
 ### <a name="Balance">`Balance`</a> [Up](#__Models)
 <div class="field-items">
-<div class="param">`account`</div>
-<div class="param-desc"><span class="param-type">string</span></div>
-<div class="param">`balance`</div>
-<div class="param-desc"><span class="param-type">string</span></div>
+<div class="param">account: string</div>
+<div class="param">balance: string</div>
 </div>
 </div>
 <div class="model">
 
 ### <a name="BalanceMultiAddr">`BalanceMultiAddr`</a> [Up](#__Models)
-
 <div class="field-items">
-
-<div class="param">`status`</div>
-
-<div class="param-desc"><span class="param-type">integer</span> format: int32</div>
-
-<div class="param">`message`</div>
-
-<div class="param-desc"><span class="param-type">string</span></div>
-
-<div class="param">`result`</div>
-
-<div class="param-desc"><span class="param-type">[array[Balance]](#Balance)</span></div>
-
+<div class="param">status: integer</div>
+<div class="param">message: string</div>
+<div class="param">result: array[Balance]</div>
 </div>
 
 </div>
@@ -432,19 +419,9 @@ Success [ProfitAndLoss](#ProfitAndLoss)</div>
 ### <a name="BalanceSingleAddr">`BalanceSingleAddr`</a> [Up](#__Models)
 
 <div class="field-items">
-
-<div class="param">`status`</div>
-
-<div class="param-desc"><span class="param-type">integer</span> format: int32</div>
-
-<div class="param">`message`</div>
-
-<div class="param-desc"><span class="param-type">string</span></div>
-
-<div class="param">`result`</div>
-
-<div class="param-desc"><span class="param-type">string</span></div>
-
+<div class="param">status: integer</div>
+<div class="param">message: string</div>
+<div class="param">result: string</div>
 </div>
 
 </div>
@@ -454,19 +431,9 @@ Success [ProfitAndLoss](#ProfitAndLoss)</div>
 ### <a name="CexInOutflow">`CexInOutflow`</a> [Up](#__Models)
 
 <div class="field-items">
-
-<div class="param">`status`</div>
-
-<div class="param-desc"><span class="param-type">integer</span> format: int32</div>
-
-<div class="param">`message`</div>
-
-<div class="param-desc"><span class="param-type">string</span></div>
-
-<div class="param">`result`</div>
-
-<div class="param-desc"><span class="param-type">[InOutflow](#InOutflow)</span></div>
-
+<div class="param">status: integer</div>
+<div class="param">message: string</div>
+<div class="param">result: [InOutflow]</div>
 </div>
 
 </div>
@@ -476,19 +443,9 @@ Success [ProfitAndLoss](#ProfitAndLoss)</div>
 ### <a name="CountTransactions">`CountTransactions`</a> [Up](#__Models)
 
 <div class="field-items">
-
-<div class="param">`status`</div>
-
-<div class="param-desc"><span class="param-type">integer</span> format: int32</div>
-
-<div class="param">`message`</div>
-
-<div class="param-desc"><span class="param-type">string</span></div>
-
-<div class="param">`result`</div>
-
-<div class="param-desc"><span class="param-type">integer</span> format: int32</div>
-
+<div class="param">status: integer</div>
+<div class="param">message: string</div>
+<div class="param">result: integer</div>
 </div>
 
 </div>
@@ -498,19 +455,9 @@ Success [ProfitAndLoss](#ProfitAndLoss)</div>
 ### <a name="DexInOutflow">`DexInOutflow`</a> [Up](#__Models)
 
 <div class="field-items">
-
-<div class="param">`status`</div>
-
-<div class="param-desc"><span class="param-type">intege</span> format: int32</div>
-
-<div class="param">`message`</div>
-
-<div class="param-desc"><span class="param-type">string</span></div>
-
-<div class="param">`result`</div>
-
-<div class="param-desc"><span class="param-type">[InOutflow](#InOutflow)</span></div>
-
+<div class="param">status: integer</div>
+<div class="param">message: string</div>
+<div class="param">result: [InOutflow]</div>
 </div>
 
 </div>
@@ -520,15 +467,8 @@ Success [ProfitAndLoss](#ProfitAndLoss)</div>
 ### <a name="InOutflow">`InOutflow`</a> [Up](#__Models)
 
 <div class="field-items">
-
-<div class="param">`inflow`</div>
-
-<div class="param-desc"><span class="param-type">double</span> format: double</div>
-
-<div class="param">`outflow`</div>
-
-<div class="param-desc"><span class="param-type">double</span> format: double</div>
-
+<div class="param">inflow: double</div>
+<div class="param">outflow: double</div>
 </div>
 
 </div>
@@ -538,19 +478,9 @@ Success [ProfitAndLoss](#ProfitAndLoss)</div>
 ### <a name="ListTransactions">`ListTransactions`</a> [Up](#__Models)
 
 <div class="field-items">
-
-<div class="param">`status`</div>
-
-<div class="param-desc"><span class="param-type">integer</span> format: int32</div>
-
-<div class="param">`message`</div>
-
-<div class="param-desc"><span class="param-type">string</span></div>
-
-<div class="param">`result`</div>
-
-<div class="param-desc"><span class="param-type">[array[Transaction]](#Transaction)</span></div>
-
+<div class="param">status: integer</div>
+<div class="param">message: string</div>
+<div class="param">result: [array[Transaction]]</div>
 </div>
 
 </div>
@@ -558,21 +488,10 @@ Success [ProfitAndLoss](#ProfitAndLoss)</div>
 <div class="model">
 
 ### <a name="ProfitAndLoss">`ProfitAndLoss`</a> [Up](#__Models)
-
 <div class="field-items">
-
-<div class="param">`status`</div>
-
-<div class="param-desc"><span class="param-type">integer</span> format: int32</div>
-
-<div class="param">`message`</div>
-
-<div class="param-desc"><span class="param-type">string</span></div>
-
-<div class="param">`result`</div>
-
-<div class="param-desc"><span class="param-type">double</span> format: double</div>
-
+<div class="param">status: integer</div>
+<div class="param">message: string</div>
+<div class="param">result: double</div>
 </div>
 
 </div>
