@@ -2,15 +2,15 @@
 
 <div class="app-desc">An ASP.NET Core Web API for managing ToDo items</div>
 
-<div class="app-desc">More information: https://quanteam.fr/contactez-nous/</div>
+<div class="app-desc">More information: </div>
 
-<div class="app-desc">Contact Info: contact@quanteam.fr</div>
+<div class="app-desc">Contact Info: </div>
 
 <div class="app-desc">Version: v1</div>
 
-<div class="license-info">Copyright (c) 2022-2023 Quanteam</div>
+<div class="license-info"></div>
 
-<div class="license-url">https://quanteam.fr</div>
+<div class="license-url"></div>
 
 ## Access
 
